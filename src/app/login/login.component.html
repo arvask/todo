@@ -1,11 +1,9 @@
-
-<div>
-    <label>Name</label>
-    <input type="text" [(ngModel)]="login" required>
-</div>
-<div>
-    <label>Password</label>
-    <input type="password" [(ngModel)]="password" required>
-</div>
-
-<button (click)="logIn()">LogIn</button>
+<form class="login">
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="loginForm.lodin" placeholder="Name" name="login" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" [(ngModel)]="loginForm.password" placeholder="Password" required name="password"> 
+    </mat-form-field>
+    <button mat-button color="primary" (click)="logIn()">LogIn</button>
+</form>

@@ -17,7 +17,7 @@ export class AuthService {
   public currentUser: Observable<IUser>;
 
  
-  url = 'http://localhost:3000';
+  private readonly url = 'http://localhost:3000';
  
   constructor(private http: HttpClient,private router: Router) {
     this.currentUserSubject = new BehaviorSubject<IUser>(JSON.parse(localStorage.getItem('currentUser')));

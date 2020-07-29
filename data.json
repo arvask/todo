@@ -5,14 +5,14 @@
             "name": "First todo",
             "description": "First TODO",
             "createdAt": "07272020",
-             "editedAt": "07272020"
+            "editedAt": "07272020"
         },
         {
             "id": "0002",
             "name": "First todo",
             "description": "First TODO",
             "createdAt": "07272020",
-             "editedAt": "07272020"
+            "editedAt": "07272020"
         }
     ],
     "users": [
