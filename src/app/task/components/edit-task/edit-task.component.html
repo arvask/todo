@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{ title}}</h1>
+<div mat-dialog-content [formGroup]="formTask">
+  <mat-form-field >
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput type="text" formControlName="description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button>Cansel</button>
+  <button mat-button [mat-dialog-close]="data" *ngIf="data" (click)="deleteTask()">Delete</button>
+  <button mat-button [mat-dialog-close]="data" (click)="updateTaskOrCreateTask()" cdkFocusInitial>Ok</button>
+</div>

@@ -3,13 +3,11 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Task } from './../share/models/task';
+import { Task } from '../../share/models/task';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TaskService {
-  private readonly url = 'http://localhost:3000/todo';
+  private readonly url = 'http://localhost:3000/todo/';
 
   constructor(private http: HttpClient) { }
 
@@ -28,10 +26,10 @@ export class TaskService {
   }
 
   edit(task: Task) {
-    return this.http.patch(this.url, task)
+   return this.http.patch(this.url + `${task.id}`, task)
   }
 
   deleteTask(id: string) {
-    return this.http.delete(this.url + `?id=${id}`);
+    return this.http.delete(this.url + id);
   }
 }
